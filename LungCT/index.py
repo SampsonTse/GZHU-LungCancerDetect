@@ -155,7 +155,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print(fname)
         self.fname=fname
         self.label_9.setPixmap(QPixmap(fname))
-        fh = open('D:\\LungCT\\Path.txt', 'w')
+        fh = open('Path.txt', 'w')
         fh.truncate()
         fh.write(fname+' 1')
         fh.close()
@@ -281,7 +281,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         try:
 
-            test_data = MyDataset(txt='D:\\LungCT\\Path.txt', transform=transforms.ToTensor())
+            test_data = MyDataset(txt='Path.txt', transform=transforms.ToTensor())
             testloader = DataLoader(dataset=test_data, batch_size=1)
             classes=('阴性','阳性')
             dataiter = iter(testloader)
