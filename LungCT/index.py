@@ -173,7 +173,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.fname=''
         self.label_9.setText('在此显示图片')
         
-    
+    # 生成报告
     def ReportMaking(self):
         document = Document()                          # 打开一个基于默认“模板”的空白文档
         document.add_heading('检测报告', 0)      # 添加标题
